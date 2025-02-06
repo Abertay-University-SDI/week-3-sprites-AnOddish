@@ -7,6 +7,10 @@
 #include <string.h>
 #include <iostream>
 
+#include "Player.h"
+#include "Enemy.h"
+#include "Background.h"
+#include "Cursor.h"
 
 class Level : BaseLevel {
 public:
@@ -20,6 +24,20 @@ public:
 private:
 	// Level objects
 	GameObject testSprite;
-	sf::Texture texture;
 
+	sf::Texture texture;
+	sf::Texture enemy1Texture;
+	sf::Texture enemy2Texture;
+
+	sf::Texture backgroundTexture;
+	sf::Texture cursorTexture;
+
+	sf::View view;
+
+	Player player;
+	Enemy enemy1;
+	Enemy enemy2;
+	Background background;
+
+	Cursor cursor;
 };
